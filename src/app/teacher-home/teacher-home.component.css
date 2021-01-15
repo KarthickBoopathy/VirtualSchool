@@ -1,0 +1,213 @@
+.mat-tab-labels{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.side-nav{
+    width: 240px;
+    background:  #1C2A30;
+    overflow: hidden;
+    }
+    /*#2e2e2e;  #3b5998;*/
+  .pageTitle{
+    color: #f7f7f7;
+    background-color:#1C2A4D;
+    text-align: center;
+  }
+    
+    .imagediv{
+      display: flex;
+      justify-content: center;
+      padding-top: 1%;
+  }
+  .mat-sidenav-content{
+
+    height: 94.9vh;
+  }
+    
+
+    .sideNavProfileName{
+      line-height: normal;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #f7f7f7;
+     background-color:#1C2A4D; 
+      width: 100%;
+      text-align: center;
+    }
+
+  
+    h2{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #f7f7f7;
+    }
+
+    h2.timeLineClass {
+      display: flex;
+      justify-content: center;
+  }
+
+    
+    .sideNavContainer
+    {
+     padding-left: 10%;
+  
+ 
+    }
+.mat-card-subtitle{
+  color: rgb(255 255 255 / 63%);
+}
+    
+   
+    .icon-padding{
+    padding-right:15px;
+    }
+    
+    .mat-nav-list {
+    text-align: center;
+
+ 
+   /* padding-top:90px;  */
+    }
+    .mat-list-item:hover {
+      opacity: 1;
+      background-color:#1C2A4D;
+    }
+    
+    .profile-img {
+      vertical-align: middle;
+      width: 150px;
+      height: 150px;
+      border-radius: 50% !important;
+      background-color: #3e4c98;
+      cursor: pointer;
+      transition: transform .2s;
+      }
+  
+      .profile-img:hover {
+        -ms-transform: scale(1.05); /* IE 9 */
+        -webkit-transform: scale(1.05); /* Safari 3-8 */
+        transform: scale(1.05); 
+      }
+
+   p{
+
+    color: white;
+    text-align: center;
+    padding-top: 44%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 50px;
+    letter-spacing: 3px;
+    }
+    
+  
+    .mat-drawer-content {
+    overflow: hidden;
+    }
+    
+    .sideNavLink{
+    overflow: hidden;
+   
+    }
+    
+    .mat-divider {
+    padding:8px;
+    border-width:0px;
+    }
+
+    .mat-drawer-inner-container {
+      width: fit-content;
+      height: 100%;
+      overflow: auto;
+      padding-left: -10px;
+      margin-right: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+
+
+  .teacher-home-section{
+    background: url('../../assets/Timeline/Student-PrimaaryPose.jpg') no-repeat;
+    background-size: cover;
+    height: 60%
+    }
+    .mat-scheduled-class{
+      padding-left: 200px;
+      }
+
+        nav {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background: #1C2A4D;
+      height: 32px;
+      width: 100%;
+      color: white;
+      }
+      .mat-card-content-task {
+      color: white;
+      }
+ 
+  button.checkbtn{
+    font-size: 20px;
+    color:#f7f7f7;
+    float: right;
+    line-height: 80px;
+    
+    cursor: pointer;
+    display: block;
+  /*  margin: 10px; */
+    margin-top: -27px;
+  }
+  
+  #check{
+    display: none;
+  }
+
+/*
+
+  .mat-tab-group {
+    margin-bottom: 48px;
+  }
+  
+  */
+  
+
+
+  
+  @media (max-width:858px){
+  
+  nav{
+    padding-top: 10px;
+  }
+  button.checkbtn{
+      display: inline-block;
+      margin-top: -35px;
+      
+    }
+    .timeLineClass
+    {
+      margin-top: -10px;
+     
+    }
+  
+  
+  .togglebutton{
+    display: none;
+  }
+    #check:checked ~ ul{
+      left:0;
+  
+    }
+  
+  
+  }
+    
+  @media (max-width:450px){
+  
+    .side-nav{
+      width: 100%;
+
+  }
+ 
+
+  }
+  

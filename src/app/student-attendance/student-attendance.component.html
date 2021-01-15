@@ -1,0 +1,48 @@
+<div class="attendance-container">
+
+    <div class="attendance-table-main table-responsive">
+
+        <h2>Date : </h2>
+        <table class="table attendance-table">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of myStudents">
+
+                    <td scope="row"></td>
+                    <td scope="row">{{student.StudentID}}</td>
+                    <td scope="row">{{student.StudentFirstName}}</td>
+                    <td scope="row">{{student.StudentLastName}}</td>
+                    <td scope="row">
+                        <!--  {{student.Status}} -->
+                        <input name="present-or-absent" type="checkbox" id={{student.StudentID}}
+                            class="form-check-input" (change)="checkValue(student)">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="create-submit-container">
+        <div class="submit-attendance">
+            <div class="attendance-submit-option">
+                <div class="button-to-submit">
+                    <button class="btn btn-submit mat-elevation-z4" (click)="SubmitAttendance()">Submit
+                        Attendance</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+</div>

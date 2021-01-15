@@ -1,0 +1,32 @@
+table{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+    background-color: #3c5592;
+    color: white;
+    transition: transform .2s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+  
+   button:hover {
+    color: white;
+    -ms-transform: scale(1.075); /* IE 9 */
+    -webkit-transform: scale(1.075); /* Safari 3-8 */
+    transform: scale(1.075); 
+  }
+
+ 
+
+  .btn-delete-row{
+    color: white;
+  }
+
+  .material-table{
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .material-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }

@@ -1,0 +1,14 @@
+<div class="allocated-subjects">
+    <div class="subject-title-related">Releted documents and Videos</div>
+    <div class="subjectBox">
+
+        <div class="studentSubjects" *ngFor="let sub of subjectList; let i = index">
+            <br>
+            <div class="subjects-component-container mat-elevation-z4" matRipple (click)="GoToSubjectContent(sub)">
+                <h2>{{sub.subject}}</h2>
+            </div>
+            <br>
+        </div>
+
+    </div>
+</div>

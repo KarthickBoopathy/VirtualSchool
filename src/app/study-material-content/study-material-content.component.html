@@ -1,0 +1,83 @@
+<div class="shadow-lg p-3 mb-5 bg-white rounded subjectMaterialBox">
+    <br>
+    <div class="searchBar">
+        <mat-form-field class="chapters">
+            <mat-label>Chapters</mat-label>
+            <mat-select [(ngModel)]="selectedChapter" name="Chapter">
+                <mat-option *ngFor="let chap of chapter" [value]="chap.chapterValue">
+                  {{chap.chapterName}}
+                </mat-option>
+              </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button id="search-button" (click)="getValue()">Search</button>
+    </div>
+
+    <br>
+    <div class="page-div-content" >
+        <mat-accordion class="expansion-header-study-material" multi>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Study Material</mat-panel-title>
+                    <mat-panel-description>Documents</mat-panel-description>
+                </mat-expansion-panel-header>
+
+           
+                 
+
+
+                <div class="document-block">
+                    <div class="available-docs" *ngFor="let doc of availableDocs; let i = index">
+                            <a class="doc-link" href="{{doc.DocsToRead}}" target="_blank">
+                                <img class="doc-logo" src="../../assets/Img/Docs_Logo_7.jpg" alt="">
+                                <br>
+                                <mat-panel-title  style="display: block; text-align: center;">
+                                    {{doc.title}}
+                                </mat-panel-title>
+                            </a>
+                    </div>
+                </div> 
+
+              
+
+                    <!--   <mat-panel-description>
+                            No Contents are available to display.
+                        </mat-panel-description> -->
+                        
+
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </div>
+    <div class="page-div-videos">
+        <mat-accordion class="expansion-header-study-material" multi>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Study Material</mat-panel-title>
+                    <mat-panel-description>Related Videos</mat-panel-description>
+                </mat-expansion-panel-header>
+                <br>
+
+
+                
+                <div class="video-block">
+                    <div class="available-videos" *ngFor="let vid of availableVideos; let i = index">
+                        <video class="mat-elevation-z6 videos-toplay" width="270" height="200" controls>
+                            <source src={{vid.videosToPlay}} type="video/mp4">
+                        </video>
+                        <br>
+                        <mat-panel-title style="display: block; text-align: center;margin-top: 10px;">
+                            {{vid.title}}</mat-panel-title>
+                        <br>
+                    </div>
+                </div>
+
+                <!-- <mat-panel-description>
+                    No Videos are available to display.
+                </mat-panel-description>  -->
+
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+ 
+</div>

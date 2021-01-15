@@ -1,0 +1,78 @@
+<div class="main-container">
+    <div class="outer-box">
+        <div class="inner-box">
+            <mat-accordion class="expansion-header-schedule-class mat-elevation-z5"
+                *ngFor="let viewQuestions of allQuestions" multi>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Class - {{viewQuestions.Class}}</mat-panel-title>
+                        <mat-panel-description>{{viewQuestions.Subject}}</mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="sets-of-questions">
+                        <div class="question-in-table table-responsive">
+                            <table class="table question-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Que.No</th>
+                                        <th scope="col">Items</th>
+                                        <th scope="col">Question</th>
+                                        <th scope="col">Option A</th>
+                                        <th scope="col">Option B</th>
+                                        <th scope="col">Option C</th>
+                                        <th scope="col">Option D</th>
+                                        <th scope="col">Answer</th>
+                                        <th scope="col">Exam</th>
+                                        <th scope="col">Question ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let que of viewQuestions.examQuestions">
+
+                                        <td scope="row"></td>
+                                        <td scope="row">
+                                            <input type="checkbox" id={{que.QuestionID}} class="form-check-input"
+                                                (change)="checkValue(que)">
+                                        </td>
+                                     
+
+                                        <td>
+                                            <div class="class-keywords">
+                                                {{que.Question}}
+
+                                            </div>
+                                        </td>
+
+                                        <td>{{que.OptionA}}</td>
+                                        <td>{{que.OptionB}}</td>
+                                        <td>{{que.OptionC}}</td>
+                                        <td>{{que.OptionD}}</td>
+                                        <td>{{que.Answer}}</td>
+                                        <td>{{que.Exam}}</td>
+                                        <td>{{que.QuestionID}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+                    <div class="create-submit-container">
+                        <div class="submit-questions">
+                            <div class="conduct-submit-option">
+                                <div class="button-to-conduct">
+                                    <button class="btn btn-conduct-question mat-elevation-z4"
+                                        (click)="conductQuiz()">Conduct
+                                        Quiz</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>

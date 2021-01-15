@@ -1,0 +1,113 @@
+
+.inner-box{
+    width: 95%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+/*
+.outer-box{
+    width: 95%;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+*/
+table.question-table{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+   
+    }
+  
+    .question-in-table{
+  
+      margin-top: 20px;
+    }
+
+    .class-keywords{
+
+        word-wrap: break-word;
+        width: 90%;
+          
+        }
+        .question-table {
+            counter-reset: serial-number; /* Set the serial number counter to 0 */
+        }
+        
+            .question-table td:first-child:before {
+                counter-increment: serial-number; /* Increment the serial number counter */
+                content: counter(serial-number); /* Display the counter */
+            }
+            .start-date{
+                margin-right: 5%;
+                display: inline-block;
+                width: 160px;
+                height: 30px;
+                overflow: hidden;
+                border-radius: 10px;
+                background-color: #385f39;
+                transition: transform .2s; 
+            
+            cursor: pointer;
+                
+            }
+            .end-date{
+            display: inline-block;
+            width: 160px;
+            height: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color:   #a74740;
+            float: right;
+            transition: transform .2s; 
+            margin-left: 5%;
+            cursor: pointer;
+            }
+  
+            .start-date:hover,.end-date:hover {
+            color: white;
+            -ms-transform: scale(1.075); /* IE 9 */
+            -webkit-transform: scale(1.075); /* Safari 3-8 */
+            transform: scale(1.075); 
+            }
+
+            h3#desc4{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                display: flex;
+                justify-content: center;
+                color: white;
+                
+            }
+            
+            
+             
+            h3#desc5{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                display: flex;
+                justify-content: center;
+                color: white;
+            }
+
+            @media (max-width:540px){
+        
+           
+                .start-date{
+                    
+                    width: 85%;
+                 margin-left: 5%;
+               
+                }
+                .end-date{
+                    width: 85%;
+                    float: none;
+              
+                  
+                }
+
+                .class-keywords{
+                    display: inline;  
+                    }
+              }

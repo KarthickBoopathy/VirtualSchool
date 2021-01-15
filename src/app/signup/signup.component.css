@@ -1,0 +1,142 @@
+.signup-container{
+
+    /*overflow: hidden;
+    border-radius: 10px; */
+        width: 320px;
+    }
+
+    .parent-div{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+/*
+      .title{
+
+        margin-top: 10%;
+      } */
+      
+      #title-signup{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+      }
+
+
+      .firstname-part,.lastname-part,.username-part,.emailid-part,.dateofbirth-part,.age-part,.institutionreferenceid-part,.createpassword-part,.confirmpassword-part,.secretquestion-part,.secretanswer-part{
+        margin-bottom: 3%;
+      }
+
+    /*  button.signup-button{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        margin-top: -8px;
+        background-color: #1C3144;
+      }
+      
+      button.signup-button:hover{
+      
+        font-weight: bolder;
+        color: white;
+      } */
+
+      button{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        margin-top: -8px;
+        background-color: #1C3144;
+        width: 100%;
+        transition: transform .2s;
+      }
+      
+      button:hover{
+        color: white;
+        -ms-transform: scale(1.075); /* IE 9 */
+        -webkit-transform: scale(1.075); /* Safari 3-8 */
+        transform: scale(1.075); 
+      }
+      .panel-footer{
+        margin-top: -15px;
+      }
+
+      button.close{
+        display: none;
+      }
+      
+
+@media (max-width:770px){
+
+  .signup-container{
+
+  
+    width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button.close{
+      display: block;
+    }
+}
+/*
+@media (max-width:540px){
+
+  .signup-container{
+
+  
+    width: 140%;
+      
+    }
+}
+
+@media (max-width:450px){
+
+  .signup-container{
+
+  
+    width: 160%;
+      
+    }
+}
+
+@media (max-width:420px){
+
+  .signup-container{
+
+  
+    width: 145%;
+  
+    }
+}
+
+@media (max-width:375px){
+
+  .signup-container{
+
+  
+    width: 100%;
+  
+    }
+}
+
+@media (max-width:320px){
+
+  .signup-container{
+
+  
+    width: 113%;
+  
+    }
+}
+
+@media (max-width:280px){
+
+  .signup-container{
+
+  
+    width: 100%;
+  
+    }
+}
+
+*/

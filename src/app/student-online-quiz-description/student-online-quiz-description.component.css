@@ -1,0 +1,392 @@
+
+h1#desc3,h2#desc1, h2#desc2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-style: italic;
+    }
+    
+    h3#desc4{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        display: flex;
+        justify-content: center;
+        color: white;
+        
+    }
+    
+    
+     
+    h3#desc5{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+    
+    .desc-total-question{
+        margin-right: 5%;
+        display: inline-block;
+        width: 160px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color:  #273b6b;
+        transition: transform .2s; 
+    margin-left: 5%;
+    cursor: pointer;
+        
+    }
+    .desc-total-time{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color:  #273b6b;
+    float: right;
+    transition: transform .2s; 
+    margin-left: 5%;
+    cursor: pointer;
+    }
+    
+    
+    
+    
+    .desc-total-question:hover,.desc-total-time:hover {
+    color: white;
+    -ms-transform: scale(1.075); /* IE 9 */
+    -webkit-transform: scale(1.075); /* Safari 3-8 */
+    transform: scale(1.075); 
+    }
+    
+    .mat-form-field#select-chapter {
+    
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .description-container{
+        margin-top: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    .ques-time{
+    
+        margin-left: 20px;
+    }
+    
+    .start-quiz-container{
+    
+        overflow: hidden;
+        border-radius: 30px;
+    }
+    
+    .container{
+        width: 95%;
+    }
+    .pager-header{
+        overflow: hidden;
+        
+    }
+    
+    .chapter-list-header{
+        margin: 0 auto;
+    }
+    
+    .page-body{
+        margin-top:20px;
+    }
+    
+    .quiz-title{
+    
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        font-size: large;
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        background: #1C3144; 
+        height: 30px;
+        padding-top: 5px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+    
+      .quiz-block{
+          margin-top: 10px;
+      }
+    
+      .quiz-question-and-options{
+        margin-top: 40px;
+      }
+    
+      .question-number-page-block{
+        display: inline-block;
+        width: 30%;
+        height: 25px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color:  #3c5592;
+        margin-top: 10px;
+      }
+    
+    .quiz-timing-block{
+        display: inline-block;
+        width: 30%;
+        height: 25px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color:  #3c5592;
+        float: right;
+        margin-top: 10px;
+      }
+    
+      h4#question-number,h4#quiz-timing{
+          color: white;
+          text-align: center;
+          vertical-align: middle;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    
+      h3#id-quiz-question-only{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    
+      label.option-label{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px;
+      }
+    
+      .options-only{
+        display: inline-block;
+        width: 45%;
+    
+    }
+    
+    
+    
+    button:hover {
+        color: white;
+        -ms-transform: scale(1.075); /* IE 9 */
+        -webkit-transform: scale(1.075); /* Safari 3-8 */
+        transform: scale(1.075); 
+      }
+    
+    .pagination-options{
+    
+        display: inline-block;
+        margin-top: 50px;
+    }
+    
+    .submit-options{
+        display: inline-block;
+        float: right;
+        margin-top: 50px;
+    }
+    
+    
+    button.btn-first-page {
+        background-color:  #546fb1;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        margin-right: 10px;
+        
+    }
+    button.btn-prev-option{
+        background-color:  #3c5592;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        margin-right: 10px;
+        
+    }
+    button.btn-next-option{
+        background-color:  #3c5592;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        margin-right: 10px;
+        
+    }
+    button.btn-last-page {
+        background-color:  #546fb1;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        margin-right: 10px; 
+    }
+    
+    
+    button.btn-quiz{
+        margin-right: 10px;
+        transition: transform .2s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }  
+    button.btn-review{
+        margin-right: 10px;
+        transition: transform .2s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    } 
+    button.btn-submit{
+        margin-right: 10px;
+        transition: transform .2s;
+        background-color:   #3c5592;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    } 
+    
+    
+    
+    .review-container{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .reviewed-content{
+    
+        width: 40%;
+        display: inline-block;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 40px;
+        transition: transform .2s; 
+        margin-left: 5%;
+    }
+    
+    .reviewed-content:hover {
+        color: white;
+        -ms-transform: scale(1.075); /* IE 9 */
+        -webkit-transform: scale(1.075); /* Safari 3-8 */
+        transform: scale(1.075); 
+      }
+    
+    #reviewed-text{
+    
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        padding-top: 9px;
+    }
+    
+    .bg-answered{
+        background-color: #3c763d;
+    }
+    .bg-not-answered{
+       /* background-color: #f44336; */
+        background-color:   #ca3e33;
+    }
+    
+    .result-container{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    h2#id-quiz-result-title, h5#id-question-names{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    button.btn-exit-quiz{
+        background-color:  #3c5592;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        margin-left: 45%;
+    }
+    
+    button.btn-start-quiz{
+        background-color:  #3c5592;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: transform .2s;
+        
+    }
+    
+    .startquizbtn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+      @media (max-width:450px){
+        .container{
+            width: 100%;
+        }
+        .question-number-page-block{
+    
+            width: 40%;
+        }
+    
+        .quiz-timing-block{
+    
+            width: 50%;
+        }
+    
+        .options-only{
+            width: 100%;
+        }
+        .submit-options{
+           
+            float: left;
+        }
+    
+        .pagination-options {
+           
+            margin-top: 35px;
+        }
+        
+        .submit-options {
+            
+            margin-top: 30px;
+        }
+    
+        .review-container{
+            margin-top: 30px;
+        }
+    
+        button.btn-exit-quiz{
+            margin-left: 0%;
+        }
+    
+    
+      }
+    
+      @media (max-width:280px){
+        
+        .reviewed-content{
+    
+            width: 90%;
+        }
+      }
+    
+      @media (max-width:540px){
+        
+        .submit-options{
+           
+            float: left;
+        }
+        .desc-total-question {
+            
+            width: 85%;
+        }
+        .desc-total-time{
+            width: 85%;
+            float: none;
+        }
+      }
+    
+      @media (max-width:375px){
+        
+        h3#desc5{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: inline-block;
+            float: none;
+            display: flex;
+            justify-content: center;
+        }
+      }
+    

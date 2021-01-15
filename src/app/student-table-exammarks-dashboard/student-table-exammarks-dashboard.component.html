@@ -1,0 +1,19 @@
+<div class="dashboard-exam-mark-table mat-elevation-z6">
+    <div class="main-content">
+        <h2>Student - Academic Score</h2>
+        <div class="table-container table-responsive">
+            <table class="table">
+                <thead>
+                    <tr *ngFor="let colm of columns">
+                        <th scope="col" *ngFor="let colVal of colm.columnHeader">{{colVal}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rowsArray of row">
+                        <td scope="row" *ngFor="let val of rowsArray.rows">{{val}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

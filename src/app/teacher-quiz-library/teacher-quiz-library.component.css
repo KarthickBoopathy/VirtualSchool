@@ -1,0 +1,60 @@
+.question-table {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .question-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }
+    table.question-table{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       
+       
+        }
+
+        button{
+            background-color: #3c5592;
+            color: white;
+            transition: transform .2s;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           }
+          
+           button:hover {
+            color: white;
+            -ms-transform: scale(1.075); /* IE 9 */
+            -webkit-transform: scale(1.075); /* Safari 3-8 */
+            transform: scale(1.075); 
+          }
+        button.btn-conduct-question{
+            color: white;
+          
+          }
+        .button-to-conduct{
+            display: flex;
+            justify-content: center;
+          }
+
+          h2#desc2{
+              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+              font-style: italic;
+              display: flex;
+              justify-content: center;
+          
+          } 
+
+          .mat-form-field{
+            margin-left: 5%;
+            display: inline-block;
+          }
+
+          .searchbar{
+              margin-top: 30px;
+          }
+
+          .inner-box{
+            width: 95%;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 25px;
+           margin-bottom: 25px;
+          }

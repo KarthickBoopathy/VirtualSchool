@@ -1,0 +1,229 @@
+
+.logo{
+  display: inline-block;
+}
+
+img.logo-image{
+  width: 150px;
+  margin-left: 40%;
+
+}
+
+.navigatons{
+display: inline-block;
+margin-left: 70%;
+}
+
+.topnav{
+  margin-top: 2%;
+}
+button.signup{
+  display: none;
+}
+
+.login-div{
+  display: inline-block;
+  padding-left:10% ;
+
+}
+
+.virtualquotes-div{
+  display: inline-block;
+  margin-left: 10%;
+
+}
+
+.page-content{
+
+  margin-top: 5%;
+}
+
+@media (max-width:1135px){
+
+.navigatons {
+  display: inline-block;
+  margin-left: 50%;
+ 
+}
+.topnav{
+  margin-top: 5%;
+}
+
+
+
+}
+
+
+@media (max-width:770px){
+  .navigatons{
+  
+    margin-left: 40%;
+    }
+
+    img.logo-image {
+      width: 125px;
+      margin-left: 40%;
+  }
+
+  .topnav{
+    margin-top: 5%;
+  }
+
+  .page-content{
+ 
+    margin-top: 10%;
+  }
+  .login-div{
+    display: inline-block;
+    margin-left: 12%;
+  }
+  button.signup{
+    display: inline-block;
+  }
+  
+  .virtualquotes-div{
+    display: none;
+  
+  }
+
+
+}
+
+@media (max-width:540px){
+
+  .navigatons{
+    margin-left: 35%;
+}
+
+}
+
+@media (max-width:450px){
+
+  .entire{
+    overflow: hidden;
+  }
+ 
+ 
+  .login-div{
+    display: inline-block;
+    padding-left: 0%;
+
+    margin-top: 10%;
+ 
+  
+  }
+  
+  .navigatons{
+  
+    margin-left: 30%;
+    padding-top: 20px;
+    }
+
+    img.logo-image {
+      width: 125px;
+      margin-left: 8%;
+  }
+
+ 
+}
+@media (max-width:420px){
+
+
+  .navigatons{
+  
+    margin-left: 22%;
+
+    }
+
+
+}
+
+@media (max-width:375px){
+
+
+  .navigatons{
+  
+    margin-left: 15%;
+
+    }
+
+ 
+
+}
+
+@media (max-width:320px){
+
+
+  .navigatons{
+  
+    margin-left: 12%;
+
+    }
+    img.logo-image {
+      width: 100px;
+      margin-left: 8%;
+  }
+
+}
+
+@media (max-width:280px){
+
+  img.logo-image {
+
+    margin-left: 75%;
+}
+  .navigatons{
+  
+    margin-left: 20%;
+
+    }
+}
+
+
+/*
+
+.homepage-main {
+  margin-left: 10%;
+  margin-top: -3%;
+}
+
+.logo{
+  display: inline-block;
+  margin-left: -1%;
+ 
+}
+.signup-class{
+  margin-top: -2%;
+}
+.login {
+  display: inline-block;
+  padding-left: 10%;
+  padding-top: 12%;
+} 
+
+.brand-image {
+ 
+    margin-left: -2%;
+}
+img.logo-image {
+  margin-top: -82%;
+}
+
+@media (max-width:1020x){
+  .logo{
+    display: none; 
+
+  }
+  .login {
+    display: block;
+  }
+
+
+
+}
+
+*/
+
+
+
+

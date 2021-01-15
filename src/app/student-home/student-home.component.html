@@ -1,0 +1,85 @@
+<nav>
+  <button class="checkbtn" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h2 class="timeLineClass" style="padding-left: 40px;">{{timelineValue}}</h2>
+</nav>
+<mat-sidenav-container>
+
+  <mat-sidenav #drawer class="side-nav" mode="side" opened position="start">
+    <div class="pageTitle">
+      <h2>Student Profile</h2>
+    </div>
+
+    <div class="imageContainer">
+      <div class="imagediv">
+     <div class="rounded profile-img" (click)="OpenProfile()"> 
+       <p>KB</p>
+     </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="sideNavProfileName">
+      <h2>Karthick Boopathy</h2>
+    </div>
+
+
+
+    <div class="sideNavLink">
+
+      <mat-nav-list>
+        <mat-list-item (click)="GoToHome()">
+          <h2>Home</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToExamRoom()">
+          <h2>Exam Room</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToOnlineQuiz()">
+          <h2>Online Quiz</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToDashBoard()">
+          <h2>Dashboard</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <h2>Sign-out</h2>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="overflow:auto;">
+ 
+ 
+
+    <section class="student-home-section">
+    </section>
+    <br>
+    <section class = "student-homepage-content">
+      <div class="scheduled-meetings">
+        <app-student-scheduled-meetings></app-student-scheduled-meetings>
+      </div>
+
+      <br>
+
+      <div class="allocated-subjects">
+      <app-student-subjects></app-student-subjects>
+    </div>
+    <br> 
+    <div class="allocated-subjects">
+      <div class="meeting-title">Change Password</div>
+
+      <app-change-password></app-change-password>
+    </div>
+    </section>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

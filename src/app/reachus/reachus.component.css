@@ -1,0 +1,17 @@
+.cardReachUS {
+  max-width: 600px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cardSchoolLogo {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.contactdetail{
+
+  
+  font-weight: normal;
+  color: darkblue;
+  font-style: italic;
+}

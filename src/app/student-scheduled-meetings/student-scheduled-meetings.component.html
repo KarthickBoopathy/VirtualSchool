@@ -1,0 +1,33 @@
+<div class="student-scheduled-meetings">
+    <div class="meeting-title">Today's Classes</div>
+    <div class="meetings">
+        <div class="classBox table-responsive">
+            <table class="table meeting-table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Faculty</th>
+                        <th scope="col">Join</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr *ngFor="let classes of studentScheduledClasses">
+                        <td scope="row"></td>
+                        <td>{{classes.subject}}</td>
+                        <td>{{classes.time}}</td>
+                        <td>{{classes.topic}}</td>
+                        <td>{{classes.faculty}}</td> 
+                        <td>
+                            <a href="{{classes.join}}" target="_blank"><button
+                                    class="btn btn-join-now mat-elevation-z4">Join</button></a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

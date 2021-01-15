@@ -1,0 +1,126 @@
+<nav>
+   
+    <button class="checkbtn" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h2 class="timeLineClass" style="padding-left: 40px;">{{timelineValue}}</h2>
+
+</nav>
+<mat-sidenav-container>
+
+    <mat-sidenav #drawer class="side-nav" mode="side" opened position="start">
+        <div class="pageTitle">
+            <h2>Faculty Profile</h2>
+        </div>
+
+        <div class="imageContainer">
+            <div class="imagediv">
+                <div class="rounded profile-img">
+                    <p>DR</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="sideNavProfileName">
+            <h2>Deepak Ramakrishnan</h2>
+        </div>
+
+
+
+        <div class="sideNavLink">
+
+            <mat-nav-list>
+                <mat-list-item (click)="GoToTeacherHome()">
+                    <h2>Home</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="GoToTeacherClassRoom()">
+                    <h2>Class Room</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="GoToTeacherConductTest()">
+                    <h2>Conduct Test</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="GoToTeacherStudyMaterial()">
+                    <h2>Study Material</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <h2>Sign-out</h2>
+                </mat-list-item>
+            </mat-nav-list>
+
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content style="overflow:auto;">
+
+
+
+ 
+        <br>
+        <section class="teacher-myclassroom-content">
+            <div class="main-content" *ngIf="showClassRoomTable">
+                <div class="myclass">
+                    <div class="my-class-in-table table-responsive">
+                        <table class="table myclass-table">
+                            <thead>
+                                <th scope="col">S.No</th>
+                                <th scope="col">Student ID</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Student Rank</th>
+                                <th scope="col">Overall Percentage</th>
+                                <th scope="col">Digital Percentage</th>
+                                <th scope="col">Blood Group</th>      
+                                <th scope="col">Contact Number 1</th>
+                                <th scope="col">Contact Number 2</th>
+                                <th scope="col">Email</th>
+
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let class of myClass">
+                                    <td scope="row"></td>
+                                    <td scope="row">
+                                        <a (click)="GoToDashBoard(class.StudentID)">{{class.StudentID}}</a>
+                                    </td>
+                                    <td scope="row">{{class.StudentFirstName}}</td>
+                                    <td scope="row">{{class.StudentLastName}}</td>
+                                    <td scope="row">{{class.Rank}}</td>
+                                    <td scope="row">{{class.OverallPercentage}}</td>
+                                    <td scope="row">{{class.DigitalExamPercentage}}</td>
+                                    <td scope="row">{{class.BloodGroup}}</td>
+                                    <td scope="row">{{class.ContactNumber1}}</td>
+                                    <td scope="row">{{class.ContactNumber2}}</td>
+                                    <td scope="row">{{class.EmailID}}</td>
+                                </tr>
+                                <!--   <tr *ngFor="let class of myClass">
+                <td>{{class.StudentID}}</td>
+                <td *ngFor="let details of class.StudentDetails">{{details.StudentFirstName}}</td>
+                <td *ngFor="let details of class.StudentDetails">{{details.StudentLastName}}</td>
+            </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dashboard-panel" *ngIf="showDashboardContent">
+                <div class="backbutton">
+                    <button class="btn btn-back mat-elevation-z4" (click)="GoBack()">Go Back</button>
+                </div>
+                <div class="dashboard">
+                    <app-student-dashboard-content></app-student-dashboard-content>
+                </div>
+            </div>
+        </section>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

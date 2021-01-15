@@ -1,0 +1,152 @@
+button{
+    background-color: #3c5592;
+    color: white;
+    transition: transform .2s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+  
+   button:hover {
+    color: white;
+    -ms-transform: scale(1.075); /* IE 9 */
+    -webkit-transform: scale(1.075); /* Safari 3-8 */
+    transform: scale(1.075); 
+  }
+
+  button.btn-add-question,button.btn-set-question{
+    color:white;
+  }
+
+  .btn-delete-row{
+    color: white;
+  }
+.conduct-questions{
+    width: 95%;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-color: white;
+}
+
+.select-class{
+
+    display: inline-block;
+    margin-right: 5%;
+  
+}
+
+.select-subject{
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.create-question-container{
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.select-basic-details{
+
+    margin-left: 15%;
+}
+
+.question-field {
+    width: 80%;
+   
+  }
+
+  h2#desc1{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  .keywords {
+    width: 80%;
+    
+  }
+/*
+  .score-and-submit{
+    margin-left: 5%;
+  } */
+
+  .score, .set-question{
+      display: inline-block;
+      margin-right: 5%;
+  }
+
+  table.question-table{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+ 
+  }
+
+  .question-in-table{
+
+    margin-top: 20px;
+  }
+
+  h2#desc2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  .sets-of-questions,.add-question-container{
+    margin-top: 20px;
+  }
+
+  .keyword-display{
+    display: inline-block;
+  }
+
+.class-keywords{
+
+  word-wrap: break-word;
+  width: 200px;
+    
+  }
+
+  
+
+  .question-table {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .question-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }
+
+
+    button.btn-conduct-question{
+      color: white;
+    
+    }
+
+    .button-to-conduct{
+      display: flex;
+      justify-content: center;
+    }
+
+    .sets-of-questions{
+      margin-left: 5%;
+    }
+
+    .main-container{
+      margin-left: 5%;
+    }
+
+
+    .answer-optionA,.answer-optionB,.answer-optionC,.answer-optionD{
+        display: inline-block;
+        margin-right: 3%;
+    }
+  
+
+    @media (max-width:760px){
+
+      .class-keywords{
+        width: auto;   
+        }
+    }

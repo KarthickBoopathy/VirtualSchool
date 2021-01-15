@@ -1,0 +1,81 @@
+
+<nav>
+    <button class="checkbtn" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h2 class="timeLineClass" style="padding-left: 40px;">{{timelineValue}}</h2>
+</nav>  
+    <mat-sidenav-container>
+      
+        <mat-sidenav #drawer class="side-nav" mode="side" opened position="start">
+            <div class="pageTitle">
+                <h2>Subjects</h2>
+            </div>
+            <div class="sideNavLink">
+                <mat-nav-list>
+                    <mat-list-item *ngFor="let sub of subjectList; let i = index">
+                        <h2>{{sub.subject}}</h2>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </mat-nav-list>
+            </div>
+            <div class="sideNavProfileName">
+                <h2>Profile and Exit</h2>
+            </div>
+            <div class="sideNavLink">
+                <mat-nav-list>
+                    <mat-list-item (click)="GoToTeacherHome()">
+                        <h2>Home</h2>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <h2>Sign-out</h2>
+                    </mat-list-item>
+                </mat-nav-list>
+            </div>
+        </mat-sidenav>
+    
+    
+        <!--///////////////////////Main Content/////////////////////////////////-->
+    
+        <mat-sidenav-content style="overflow:auto;">
+       
+            <section class="student-homepage-content">
+                <div class="main-content">
+
+                    <mat-tab-group mat-align-tabs="center">
+                        
+                        <mat-tab label="Conduct Test">
+                            <app-teacher-conduct-handwritten-test></app-teacher-conduct-handwritten-test>
+                        </mat-tab>
+
+                        <mat-tab label="Conduct Quiz">
+                          <app-teacher-conduct-online-quiz></app-teacher-conduct-online-quiz>
+                        </mat-tab>
+
+                        <mat-tab label="Conducted Test">
+                           <app-teacher-conducted-test></app-teacher-conducted-test>
+                          </mat-tab>
+
+                  <!--        <mat-tab label="Conducted Quiz">
+                            
+                          </mat-tab> -->
+
+                        <mat-tab label="Exam Library">
+                            <app-teacher-exam-library></app-teacher-exam-library>
+                        </mat-tab>
+
+                        <mat-tab label="Quiz Library">
+                            <app-teacher-quiz-library></app-teacher-quiz-library>
+                        </mat-tab>
+
+                      </mat-tab-group>
+                    </div>
+            </section>
+    
+        </mat-sidenav-content>
+    
+    </mat-sidenav-container>
+    
+    
+    

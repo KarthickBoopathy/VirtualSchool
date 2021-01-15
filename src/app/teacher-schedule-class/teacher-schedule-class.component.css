@@ -1,0 +1,87 @@
+
+
+.expansion-header-schedule-class .mat-expansion-panel-header-title,
+.expansion-header-schedule-class .mat-expansion-panel-header-description {
+  flex-basis: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.expansion-header-schedule-class .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .expansion-header-schedule-class .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .classes,.section,.subjects,.topic,.dateofclass,.dateofclass-reccurrence,.timeofclass,.meet-link,.schedule-meeting{
+    display: inline-block;
+    margin-right: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  button.btn-schedule-single-class{
+    background-color: #4965a9;
+    color: white;
+    transition: transform .2s;
+  }
+
+  button.btn-single-class, button.btn-reccurrance-classes,button.btn-delete-row,button.btn-submit-meeting{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #4965a9;
+    color: white;
+    transition: transform .2s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  button:hover {
+    -ms-transform: scale(1.075); /* IE 9 */
+    -webkit-transform: scale(1.075); /* Safari 3-8 */
+    transform: scale(1.075); 
+  }
+
+  .submit-meeting{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+  }
+
+  .new-meeting-content{
+
+    margin-top: 10px;
+  }
+
+  h2#id-success-message{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: #3c763d;
+  }
+
+  .question-table {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .question-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }
+
+    .success-message{
+
+      margin-top: 20px;
+    }
+
+
+    .mat-expansion-panel{
+      background-color: #fcfcff;
+    }
+
+    .mat-expansion-panel:hover{
+      background-color: #ececfa;
+    }
+
+    .mat-form-field{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }

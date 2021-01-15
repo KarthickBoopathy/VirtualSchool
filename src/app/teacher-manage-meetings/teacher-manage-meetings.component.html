@@ -1,0 +1,37 @@
+
+                <div class="all-material">
+                    <div class="material-detail table-responsive">
+
+                       
+                        <table class="table material-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S.No</th>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Section</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Topic</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let meeting of meetingList">
+                               
+                                    <td scope="row"></td>
+                                    <td>{{meeting.Class}}</td>
+                                    <td>{{meeting.Section}}</td>
+                                    <td>{{meeting.Subject}}</td>
+                                    <td>{{meeting.Topic}}</td>
+                                    <td>{{meeting.Time}}</td>
+                                    <td>
+                                        <button class="btn btn-delete-row mat-elevation-z4"
+                                            (click)="remove(meeting)">Remove</button>
+                                    </td>
+                              
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>

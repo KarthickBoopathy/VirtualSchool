@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div id="id-quizdescription" class="quizdescription">
+        <div class="quiz-title">Start Quiz</div>
+
+        <div class="start-quiz-container mat-elevation-z4">
+
+
+            <div class="description-container">
+
+                <h2 id="desc1">Dear friend, remember this quiz is all about evaluating your current academic status.
+                    Please be trustful to yourself and start your Quiz.</h2>
+                <h2 id="desc2">Also please avoid opening another windows in your browser to avoid any kind of
+                    interruptions</h2>
+
+                <h1 id="desc3">Good luck !!!</h1>
+
+                <div class="ques-time">
+                    <div class="pager-header">
+                        <div class="chapter-list-header">
+                            <mat-form-field id="select-chapter">
+                                <mat-label>Select Quiz</mat-label>
+                             <!--   <mat-select [(ngModel)]="selectedQuizName" (change)="loadQuiz(selectedQuizName)">-->
+                                <mat-select>
+                                    <mat-option *ngFor="let quiz of quizchapter" [value]="quiz.quizID">
+                                        {{quiz.quizChapterName}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                 
+                    <div class="time-and-quesnumber">
+                        <div class="desc-total-question mat-elevation-z4">
+                           <!-- <h3 id="desc4">Total Questions : {{pager.count}}</h3>-->
+                           <h3 id="desc4">Total Questions : </h3>
+                        </div>
+                        <div class="desc-total-time mat-elevation-z4">
+                          <!--   <h3 id="desc5">Time : {{duration}} Min</h3> -->
+                          <h3 id="desc5">Time :  Min</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="startquizbtn">
+                <button class="btn btn-start-quiz mat-elevation-z4" (click)="startQuiz()">Start Quiz</button>
+            </div>
+          
+            <br>
+        </div>
+    </div>
+    <br>
+
+</div>

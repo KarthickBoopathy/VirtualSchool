@@ -1,0 +1,167 @@
+.side-nav{
+    width: 240px;
+    background: #1C2A30; 
+    }
+    /*#2e2e2e;   rgba(22, 22, 22, 0.94);*/
+  .pageTitle{
+    color: #f7f7f7;
+    background-color:#1C2A4D;
+    text-align: center;
+  }
+    
+
+  .mat-sidenav-content{
+
+    height: 94.9vh;
+  }
+    
+
+    .sideNavProfileName{
+      line-height: normal;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #f7f7f7;
+      background-color:#1C2A4D;
+      width: 100%;
+      text-align: center;
+    }
+
+  
+    h2{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #f7f7f7;
+    }
+    
+    h2.timeLineClass {
+      display: flex;
+      justify-content: center;
+  }
+ 
+   
+    .mat-nav-list {
+    text-align: center;
+
+ 
+   /* padding-top:90px;  */
+    }
+    .mat-list-item:hover {
+      opacity: 1;
+      background-color:#1C2A4D;
+    }
+    
+  
+    
+  
+    
+  
+ 
+    .sideNavLink{
+    overflow: hidden;
+   
+    }
+    
+    .mat-divider {
+    padding:10px;
+    border-width:0px;
+    }
+
+
+
+
+  
+    
+
+        nav {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background: #1C2A4D;
+      height: 32px;
+      width: 100%;
+      color: white;
+      }
+  
+      button.checkbtn{
+        font-size: 20px;
+        color:#f7f7f7;
+        float: right;
+        line-height: 80px;
+        
+        cursor: pointer;
+        display: block;
+      /*  margin: 10px; */
+        margin-top: -27px;
+      }
+  
+  #check{
+    display: none;
+  }
+  
+  .subjectMaterialBox{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+  }
+
+
+  .question-choices {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .choiceclass {
+    margin: 5px;
+  }
+
+  
+  @media (max-width:858px){
+  
+  nav{
+    padding-top: 10px;
+  }
+  button.checkbtn{
+    display: inline-block;
+    margin-top: -35px;
+    
+  }
+  .timeLineClass
+    {
+      margin-top: -10px;
+    
+    }
+  
+  
+
+    #check:checked ~ ul{
+      left:0;
+  
+    }
+
+   
+  
+ 
+  }
+
+  @media (max-width:540px){
+
+
+  
+    .side-nav{
+      width: 100%;
+      }
+
+  }
+
+
+ 
+  
+
+ 
+
+
+
+
+
+
+
+

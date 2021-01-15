@@ -1,0 +1,153 @@
+.login-container{
+
+overflow: hidden;
+border-radius: 10px;
+    width: 320px;
+} 
+.parent-div{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.title{
+
+  margin-top: 10%;
+}
+
+#title-login{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+.cred-part,.user-part{
+
+  margin-bottom: 8%;
+}
+
+
+
+button{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  margin-top: -8px;
+  background-color: #1C3144;
+  width: 100%;
+  transition: transform .2s;
+}
+
+button:hover{
+  color: white;
+  -ms-transform: scale(1.075); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.075); 
+}
+.panel-footer{
+  margin-top: -15px;
+}
+
+.btn-block{
+  color: white;
+}
+
+/*
+
+.panel-footer{
+ 
+ 
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -15px;
+  width: 90%;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+*/
+
+
+
+.frgtcred{
+  margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.frgtlink{
+  font-style: italic;
+  cursor: pointer;
+  
+}
+
+
+
+@media (max-width:770px){
+
+  .login-container{
+
+  
+    width: 200%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:540px){
+
+  .login-container{
+
+  
+    width: 140%;
+      
+    }
+}
+
+@media (max-width:450px){
+
+  .login-container{
+
+  
+    width: 160%;
+      
+    }
+}
+
+@media (max-width:420px){
+
+  .login-container{
+
+  
+    width: 145%;
+  
+    }
+}
+
+@media (max-width:375px){
+
+  .login-container{
+
+  
+    width: 125%;
+  
+    }
+}
+
+@media (max-width:320px){
+
+  .login-container{
+
+  
+    width: 113%;
+  
+    }
+}
+
+@media (max-width:280px){
+
+  .login-container{
+
+  
+    width: 100%;
+  
+    }
+}

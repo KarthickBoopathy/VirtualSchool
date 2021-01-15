@@ -1,0 +1,154 @@
+<div class="schedule-class-container">
+    <div class="container-content">
+        <div class="page-div-newclass">
+            <mat-accordion class="expansion-header-schedule-class" multi>
+           
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header appearance="fill">
+                        <mat-panel-title>Schedule</mat-panel-title>
+                        <mat-panel-description>New Meeting</mat-panel-description>
+                    </mat-expansion-panel-header>
+                   
+                    <div class="new-meeting-content" >
+                        <div class="meeting-options">
+                            <button class="btn btn-single-class mat-elevation-z4" (click)="addsingle()">Add Single Class</button>
+                            <button class="btn btn-reccurrance-classes mat-elevation-z4" (click)="addRecurr()">Add Reccurrance</button>
+                        </div>
+                        <br>
+                        <div class="addingfeature">
+                            <div class="add-singleclass-feature" *ngIf="addSingleclass || addRecurrenceclass">
+                                <div class="add-single-class">
+                                    <form id="teacher-schedule-meeting-form" [formGroup]="scheduledData" (ngSubmit)="onSubmit()" class="form-horizontal ">
+
+                                        <div class="classes">
+                                            <mat-form-field class="assigned-classes">
+                                                <mat-label>Select Class</mat-label>
+                                                <mat-select formControlName="selectedClass" name="Classes">
+                                                    <mat-option *ngFor="let cla of class" [value]="cla.classValue">
+                                                        {{cla.className}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+
+
+                                        
+                                        <div class="section">
+                                            <mat-form-field class="assigned-section">
+                                                <mat-label>Select Section</mat-label>
+                                                <mat-select formControlName="selectedSection" name="Section">
+                                                    <mat-option *ngFor="let sec of section" [value]="sec.sectionValue">
+                                                        {{sec.sectionName}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+
+                                    <div class="subjects">
+                                        <mat-form-field class="assigned-subjects">
+                                            <mat-label>Select Subject</mat-label>
+                                            <mat-select formControlName="selectedSubject" name="Subject">
+                                                <mat-option *ngFor="let sub of subject" [value]="sub.subjectValue">
+                                                    {{sub.subjectName}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="topic">
+                                        <mat-form-field class="planned-topic">
+                                            <mat-label>Enter Topic</mat-label>
+                                            <input id="topicinput" formControlName="enteredTopic" matInput >
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="dateofclass" *ngIf="addSingleclass">
+                                        <mat-form-field class="single-metting-date">
+                                            <mat-label>Choose a date</mat-label>
+                                            <input matInput [matDatepicker]="picker" formControlName="selectedDate">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                          </mat-form-field>
+                                    </div>
+
+                                    <div class="dateofclass-reccurrence" *ngIf="addRecurrenceclass">
+                                        <mat-form-field class="recurr-metting-date">
+                                            <mat-label>Enter a date range</mat-label>
+                                            <mat-date-range-input [rangePicker]="picker">
+                                              <input matStartDate formControlName="selectedStartDate" placeholder="Start date">
+                                              <input matEndDate formControlName="selectedEndDate" placeholder="End date">
+                                            </mat-date-range-input>
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-date-range-picker #picker></mat-date-range-picker> 
+                                          </mat-form-field>
+                                    </div>
+
+                                    
+
+                                    <div class="timeofclass">
+                                        <mat-form-field class="assigned-time">
+                                            <mat-label>Select Time</mat-label>
+                                            <mat-select formControlName="selectedTime" name="Time">
+                                                <mat-option *ngFor="let tim of Time" [value]="tim.timeValue">
+                                                    {{tim.timeName}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="meet-link">
+                                        <mat-form-field class="meeting-point">
+                                            <mat-label>Enter Google Meet link</mat-label>
+                                            <input id="meetinput" formControlName="enteredMeetingLink" matInput >
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="schedule-meeting">
+                                        <button class="btn btn-schedule-single-class mat-elevation-z4" (click)="scheduleMeeting()">Schedule</button>
+                                    </div>
+
+
+                                </form>
+                                </div>
+                            </div>
+
+          
+                        <div class="completed" *ngIf="showSuccessMessage">
+                            <h2 id="id-success-message">Your meeting has been successfully created !!!</h2>
+                        </div> 
+
+                        </div>
+                    </div>
+                    
+                </mat-expansion-panel>
+            </mat-accordion>
+
+            <mat-accordion class="expansion-header-schedule-class" multi>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Today</mat-panel-title>
+                        <mat-panel-description>Today's Meetings</mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                        <app-teacher-todays-meetings></app-teacher-todays-meetings>
+
+                </mat-expansion-panel>
+            </mat-accordion>
+
+            
+            <mat-accordion class="expansion-header-schedule-class" multi>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Manage</mat-panel-title>
+                        <mat-panel-description>Existing Meetings</mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <app-teacher-manage-meetings></app-teacher-manage-meetings>
+
+
+                </mat-expansion-panel>
+            </mat-accordion>
+
+        </div>
+    </div>
+</div>

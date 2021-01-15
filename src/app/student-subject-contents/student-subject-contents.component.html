@@ -1,0 +1,52 @@
+<nav>
+    <button class="checkbtn" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h2 class="timeLineClass" style="padding-left: 40px;">{{timelineValue}}</h2>
+</nav>
+
+<!--<mat-sidenav-container fullscreen> -->
+<mat-sidenav-container>
+    <mat-sidenav #drawer class="side-nav" mode="side" opened position="start">
+        <div class="pageTitle">
+            <h2>Subjects</h2>
+        </div>
+        <div class="sideNavLink">
+            <mat-nav-list>
+                <mat-list-item *ngFor="let sub of subjectList; let i = index">
+                    <h2>{{sub.subject}}</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-nav-list>
+        </div>
+        <div class="sideNavProfileName">
+            <h2>Profile and Exit</h2>
+        </div>
+        <div class="sideNavLink">
+            <mat-nav-list>
+                <mat-list-item (click)="GoToHome()">
+                    <h2>Home</h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <h2>Sign-out</h2>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+
+
+    <!--///////////////////////Main Content/////////////////////////////////-->
+
+    <mat-sidenav-content style="overflow:auto;">
+     
+        <section class="student-homepage-content">
+            <br>
+
+            <app-study-material-content></app-study-material-content>
+
+        </section>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

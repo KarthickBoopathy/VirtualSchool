@@ -1,0 +1,37 @@
+
+<div id="loginFormID" class="mat-elevation-z9 login-container">
+  <div class="parent-div">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal ">
+      <div class="panel-title">
+        <div class="title">
+          <h2 id="title-login">Login Virtual School</h2>
+        </div> 
+      </div>
+      <div class="panel-body">
+        <div class="user-part">
+          <input id="username" formControlName="userName" type="text" class="form-control" placeholder="UserName"
+            required autofocus>
+        </div>
+        <div class="cred-part">
+          <input id="password" formControlName="password" type="password" class="form-control" placeholder="Password"
+            required autofocus>
+        </div>
+
+      </div>
+
+      <div class="panel-footer">
+       <button class="button btn btn-lg btncolor btn-block text-uppercase icon-arrow-right mat-elevation-z4"
+          type="submit">Login</button>
+
+         <!-- <button class="btn btn-reccurrance-classes mat-elevation-z4" type="submit">Add Reccurrance</button>-->
+      </div>
+    </form>
+  </div>
+
+  <div class="frgtcred">
+  <a class="frgtlink" (click)="resetPasswordForm()">Forget password ? Click here !!!</a>
+    </div>
+  
+</div>
+
+

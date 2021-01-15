@@ -1,0 +1,45 @@
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+table{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.attendance-table {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .attendance-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }
+
+    button.btn-submit{
+    
+        margin-bottom: 20px;
+        background-color: #4965a9;
+        color: white;
+        transition: transform .2s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+      }
+      .btn-submit:hover {
+        -ms-transform: scale(1.075); /* IE 9 */
+        -webkit-transform: scale(1.075); /* Safari 3-8 */
+        transform: scale(1.075); 
+      }
+
+      .button-to-submit{
+        display: flex;
+        justify-content: center;
+      }
+
+    
+ 
+ 

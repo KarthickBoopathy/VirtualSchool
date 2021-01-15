@@ -1,0 +1,176 @@
+<div class="handwritten-test-container">
+    <div class="conduct-questions mat-elevation-z4">
+        <div class="main-page">
+
+            <div class="page-header">
+
+                <div class="header">
+                    <div class="select-basic-details">
+                        <form id="Set-basic-details" [formGroup]="selectedBasicData" (ngSubmit)="onSubmitBasicData()">
+                            <div class="select-class">
+                                <mat-form-field class="assigned-classes">
+                                    <mat-label>Select Class</mat-label>
+                                    <mat-select formControlName="selectedClass" name="Classes">
+                                        <mat-option *ngFor="let cla of class" [value]="cla.classValue">
+                                            {{cla.className}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="select-subject">
+                                <mat-form-field class="assigned-subjects">
+                                    <mat-label>Select Subject</mat-label>
+                                    <mat-select formControlName="selectedSubject" name="Subject">
+                                        <mat-option *ngFor="let sub of subject" [value]="sub.subjectValue">
+                                            {{sub.subjectName}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+
+                            <div class="create-question-container">
+                                <div class="create-questions">
+                                    <div class="add-option">
+                                        <div class="button-to-add">
+                                            <button class="btn btn-add-question mat-elevation-z4"
+                                                (click)="showAddQuestionComponents()">Add Question</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <form id="Set-Question-Form" [formGroup]="selectedData" (ngSubmit)="onSubmit()">
+                    <div class="main-container">
+
+
+
+                        <div class="add-question-container" *ngIf="showSetQuestion">
+                            <div class="question-block">
+
+                                <h2 id="desc1">Create your Question</h2>
+                                <div class="question-req-fields">
+                                    <mat-form-field class="question-field">
+                                        <mat-label>Create a question</mat-label>
+                                        <textarea matInput formControlName="enteredQuestion"></textarea>
+
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="answer-optionA">
+                                    <mat-form-field class="example-form-field">
+                                        <mat-label>Option A</mat-label>
+                                        <input matInput type="text" formControlName="enteredOptionA">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="answer-optionB">
+                                    <mat-form-field class="example-form-field">
+                                        <mat-label>Option B</mat-label>
+                                        <input matInput type="text" formControlName="enteredOptionB">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="answer-optionC">
+                                    <mat-form-field class="example-form-field">
+                                        <mat-label>Option C</mat-label>
+                                        <input matInput type="text" formControlName="enteredOptionC">
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="answer-optionD">
+                                    <mat-form-field class="example-form-field">
+                                        <mat-label>Option D</mat-label>
+                                        <input matInput type="text" formControlName="enteredOptionD">
+                                    </mat-form-field>
+                                </div>
+
+                               
+
+                                <div class="score-and-submit">
+                                    <div class="score">
+                                        <mat-form-field class="example-form-field">
+                                            <mat-label>Answer</mat-label>
+                                            <input matInput type="text" formControlName="enteredAnswer">
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="set-question">
+                                        <button class="btn btn-set-question mat-elevation-z4"
+                                            (click)="setQuestionForTest()">Set Question</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </form>
+
+                <div class="sets-of-questions" *ngIf="showQuestionTable">
+                    <div class="question-in-table table-responsive">
+
+                        <h2 id="desc2">Question List</h2>
+                        <table class="table question-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Que.No</th>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Option A</th>
+                                    <th scope="col">Option B</th>
+                                    <th scope="col">Option C</th>
+                                    <th scope="col">Option D</th>
+                                    <th scope="col">Answer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let que of showConductedQuesData">
+
+                                    <td scope="row"></td>
+                                    <td>{{que.showselectedClass}}</td>
+                                    <td>{{que.showSelectedSubject}}</td>
+                                    <td>{{que.showCreatedQuestion}}</td>
+                                    <td>{{que.showEnteredOptionA}}</td>
+                                    <td>{{que.showEnteredOptionB}}</td>
+                                    <td>{{que.showEnteredOptionC}}</td>
+                                    <td>{{que.showEnteredOptionD}}</td>
+                                    <td>{{que.showEnteredAnswer}}</td>
+
+                                    <td>
+                                        <button class="btn btn-delete-row mat-elevation-z4"
+                                            (click)="remove(que)">Remove</button>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="create-submit-container" *ngIf="showSubmitButton">
+                    <div class="submit-questions">
+                        <div class="conduct-submit-option">
+                            <div class="button-to-conduct">
+                                <button class="btn btn-conduct-question mat-elevation-z4"
+                                    (click)="conductExam()">Conduct Exam</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+</div>

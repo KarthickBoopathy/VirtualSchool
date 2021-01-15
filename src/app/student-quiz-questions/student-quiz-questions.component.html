@@ -1,0 +1,170 @@
+<div class="container">
+<!--
+    <div id="id-quizdescription" class="quizdescription" *ngIf="showDescription">
+        <div class="quiz-title">Start Quiz</div>
+
+        <div class="start-quiz-container mat-elevation-z4">
+
+
+            <div class="description-container">
+               
+                <h2 id="desc1">Dear friend, remember this quiz is all about evaluating your current academic status.
+                    Please be trustful to yourself and start your Quiz.</h2>
+                <h2 id="desc2">Also please avoid opening another windows in your browser to avoid any kind of
+                    interruptions</h2>
+
+                <h1 id="desc3">Good luck !!!</h1>
+
+                <div class="ques-time">
+                    <div class="pager-header">
+                        <div class="chapter-list-header">
+                            <mat-form-field id="select-chapter">
+                                <mat-label>Select Quiz</mat-label>
+                                <mat-select [(ngModel)]="selectedQuizName" (change)="loadQuiz(selectedQuizName)">
+                                    <mat-option *ngFor="let quiz of quizchapter" [value]="quiz.quizID">
+                                        {{quiz.quizChapterName}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                        <div class="time-and-quesnumber">
+                    <div class="desc-total-question mat-elevation-z4">
+                        <h3 id="desc4">Total Questions : {{pager.count}}</h3>
+                    </div>
+                    <div class="desc-total-time mat-elevation-z4">
+                    <h3 id="desc5">Time : {{duration}} Min</h3>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="startquizbtn">
+                <button class="btn btn-start-quiz mat-elevation-z4" (click)="startQuiz()">Start Quiz</button>
+            </div>
+            <br> 
+        </div>
+    </div>
+    <br>-->
+
+    <div class="quizcontent">
+
+
+
+      <!--  <div class="quizcontent" *ngIf="showQuiz">-->
+
+
+        <div class="page-body">
+            <div class="quiz-title">{{selectedQuizName}}</div>
+            <div class="quiz-question-answers">
+                <div id="quiz">
+
+                    <div *ngIf="mode=='quiz' && quiz">
+
+                        <div class="quiz-block" *ngFor="let question of filteredQuestions;">
+
+                            <!--Question Page Number-->
+                            <div class="question-number-page-block mat-elevation-z4">
+                                <h4 id="question-number">Quiz : {{pager.index + 1}} of {{pager.count}}</h4>
+                            </div>
+
+                            <!--Time-->
+                            <div *ngIf="config.duration" class="quiz-timing-block mat-elevation-z4">
+                                <h4 id="quiz-timing">Time: {{ellapsedTime}} / {{duration}}</h4>
+                            </div>
+
+                            <div class="quiz-question-and-options">
+                                <!--Questions-->
+                                <div class="question-only">
+                                    <h3 id="id-quiz-question-only" class="quiz-question-only">{{pager.index + 1}}
+                                        <span [innerHTML]="question.name"></span>
+                                    </h3>
+                                </div>
+ 
+                                <!--Question Options-->
+                                <div class="options-only-container">
+                                    <div class="options-only" *ngFor="let option of question.options">
+                                        <label class="option-label" [attr.for]="option.id">
+                                            <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected"
+                                                (change)="onSelect(question, option);" />
+                                            {{option.name}}
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="pagination-container">
+                            <div class="pagination-options">
+                                <button class="btn btn-first-page mat-elevation-z4" *ngIf="config.allowBack"
+                                    (click)="goTo(0);">First</button>
+                                <button class="btn btn-prev-option mat-elevation-z4" *ngIf="config.allowBack"
+                                    (click)="goTo(pager.index - 1);">Prev</button>
+                                <button class="btn btn-next-option mat-elevation-z4"
+                                    (click)="goTo(pager.index + 1);">Next</button>
+                                <button class="btn btn-last-page mat-elevation-z4" *ngIf="config.allowBack"
+                                    (click)="goTo(pager.count - 1);">Last</button>
+                            </div>
+
+                            <div class="submit-options" *ngIf="mode!='result'">
+                              <!--  <button class="btn btn-warning btn-quiz mat-elevation-z4"
+                                    (click)="mode = 'quiz'">Quiz</button>  -->
+                                    <button class="btn btn-warning btn-quiz mat-elevation-z4"
+                                    (click)="exitQuiz()">Quiz</button>  
+                                <button class="btn btn-info btn-review mat-elevation-z4"
+                                    (click)="mode = 'review'">Review</button>
+                                <button class="btn  btn-submit mat-elevation-z4" (click)="onSubmit();">Submit
+                                    Quiz</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="review-container" *ngIf="mode=='review'">
+                        <div class="answered-notanswered">
+                            <div class="reviewed-content mat-elevation-z4 {{ isAnswered(question) == 'Answered'? 'bg-answered': 'bg-not-answered' }}"
+                                *ngFor="let question of quiz.questions; let index = index;">
+                                <div (click)="goTo(index)" id="reviewed-text" class="p-3 mb-2">{{index + 1}}.
+                                    {{ isAnswered(question) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-container" *ngIf="mode=='result'">
+                        <div class="result">
+                            <h2 id="id-quiz-result-title">Quiz Result</h2>
+                            <div *ngFor="let question of quiz.questions; let index = index">
+                                <div class="result-question">
+                                    <h5 id="id-question-names">{{index + 1}}. {{question.name}}</h5>
+                                    <div class="row">
+                                        <div class="col-6" *ngFor="let Option of question.options">
+                                            <input id="{{Option.id}}" type="checkbox" disabled="disabled"
+                                                [(ngModel)]="Option.selected" />
+                                            {{Option.name}}
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div
+                                        class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">
+                                        Your
+                                        answer is {{isCorrect(question)}}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="closebtn">
+                            <button class="btn btn-exit-quiz mat-elevation-z4" (click)="exitQuiz()">Exit Quiz</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

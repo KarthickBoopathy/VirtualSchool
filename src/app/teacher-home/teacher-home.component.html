@@ -1,0 +1,88 @@
+<nav>
+  <button class="checkbtn" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h2 class="timeLineClass" style="padding-left: 40px;">{{timelineValue}}</h2>
+</nav>
+<mat-sidenav-container>
+
+  <mat-sidenav #drawer class="side-nav" mode="side" opened position="start">
+    <div class="pageTitle">
+      <h2>Faculty Profile</h2>
+    </div>
+
+    <div class="imageContainer">
+      <div class="imagediv">
+        <div class="rounded profile-img">
+          <p>DR</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="sideNavProfileName">
+      <h2>Deepak Ramakrishnan</h2>
+    </div>
+
+
+
+    <div class="sideNavLink">
+
+      <mat-nav-list>
+        <mat-list-item (click)="GoToTeacherHome()">
+          <h2>Home</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToTeacherClassRoom()">
+          <h2>Class Room</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToTeacherConductTest()">
+          <h2>Conduct Test</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="GoToTeacherStudyMaterial()">
+          <h2>Study Material</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <h2>Sign-out</h2>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="overflow:auto;">
+
+
+
+    <section class="teacher-home-section">
+    </section>
+    <br>
+    <section class="teacher-homepage-content">
+      <div class="main-content">
+        <mat-tab-group mat-align-tabs="center">
+
+          <mat-tab label="Schedule Class">
+            <app-teacher-schedule-class></app-teacher-schedule-class>
+          </mat-tab>
+
+          <mat-tab label="Attendence">
+            <app-student-attendance></app-student-attendance>
+          </mat-tab>
+
+          <mat-tab label="Change Password">
+            <app-change-password></app-change-password>
+          </mat-tab>
+
+        </mat-tab-group>
+      </div>
+      <br> <br>
+    </section>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

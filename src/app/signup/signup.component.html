@@ -1,0 +1,92 @@
+<div id="signupFormID" class="signup-container">
+
+  <button type="button" class="close" aria-label="Close" (click)="closeSignUp()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+    <div class="parent-div">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-horizontal ">
+
+            <div class="panel-title">
+                <div class="title">
+                  <h2 id="title-signup">Signup Virtual School</h2>
+                </div>
+              </div>
+
+
+              <div class="panel-body">
+              
+                <div class="firstname-part">
+                  <input id="firstname" formControlName="firstname" type="text" class="form-control" placeholder="First Name" required
+                    autofocus>
+                </div>
+              
+                <div class="lastname-part">
+                  <input id="lastname" formControlName="lastname" type="text" class="form-control" placeholder="Last Name" required
+                    autofocus>
+                </div>
+              
+                <div class="username-part">
+                  <input id="username" formControlName="username" type="text" class="form-control" placeholder="Username" required
+                    autofocus>
+                </div>
+              
+                <div class="emailid-part">
+                  <input id="emailid" formControlName="emailid" type="email" class="form-control" placeholder="Email ID" required
+                    autofocus>
+                </div>
+              
+              
+              
+                <div class="dateofbirth-part">
+                  <input id="dateofbirth" formControlName="dateofbirth" type="text" class="form-control" placeholder="Date of birth"
+                    required onfocus="(this.type='date')" onblur="(this.type='text')">
+                </div>
+              
+              
+              
+                <div class="age-part">
+                  <input id="age" formControlName="age" type="number" class="form-control" placeholder="Age" required autofocus>
+                </div>
+              
+                <div class="institutionreferenceid-part">
+                  <input id="institutionreferenceid" formControlName="institutionreferenceid" type="text" class="form-control"
+                    placeholder="Institution Reference ID" required autofocus>
+                </div>
+                <!--
+                <div class="institutionname-part">
+                 <label id="institutionname" formControlName="institutionname"></label>
+                </div> -->
+           
+              
+                <div class="createpassword-part">
+                  <input id="createpassword" formControlName="createpassword" type="password" class="form-control"
+                    placeholder="Create Password" required autofocus>
+                </div>
+              
+                <div class="confirmpassword-part">
+                  <input id="confirmpassword" formControlName="confirmpassword" type="password" class="form-control"
+                    placeholder="Confirm Password" required autofocus>
+                </div>
+<!--
+                <div class="secretquestion-part">
+                  <input id="secretquestion" formControlName="secretquestion" type="text" class="form-control" placeholder="Create Secret Question" required
+                    autofocus>
+                </div>
+
+                <div class="secretanswer-part">
+                  <input id="secretanswer" formControlName="secretanswer" type="text" class="form-control" placeholder="Your Secret Answer" required
+                    autofocus>
+                </div> -->
+              
+              </div>
+
+              <div class="panel-footer">
+                <button class="button btn btn-lg btncolor btn-block text-uppercase signup-button"
+                  type="submit">SignUp</button>
+              </div>
+
+
+        </form>
+    </div>
+</div>

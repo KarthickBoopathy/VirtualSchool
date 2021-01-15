@@ -1,0 +1,58 @@
+
+    table {
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        }
+
+        td{
+           
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+        }
+         
+        th{
+            
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+        }
+       .meeting-title{
+
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            font-size: large;
+            text-align: center;
+            margin-top: 1%;
+            margin-bottom: 3%;
+            background: #1C3144; 
+            height: 30px;
+            padding-top: 5px;
+            overflow: hidden;
+            border-radius: 100%;
+          }
+          button.btn-join-now{
+            margin-right: 10px;
+            background-color: #3c5592;
+            color: white;
+            transition: transform .2s;
+          }
+         
+          
+          button.btn-join-now:hover {
+    -ms-transform: scale(1.075); /* IE 9 */
+    -webkit-transform: scale(1.075); /* Safari 3-8 */
+    transform: scale(1.075); 
+  }
+
+
+  .meeting-table {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+    .meeting-table td:first-child:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+    }
+
+ 
+
