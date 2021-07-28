@@ -39,14 +39,16 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     console.log(this.loginForm.value);
     this.loginValidation = true;
+    var loginUserName = this.loginForm.value.userName;
 
-     // this.router.navigateByUrl('studentHome');
-    // this.router.navigateByUrl('studentDashboard'); 
-    // this.router.navigateByUrl('studentSubjectContent'); 
-    // this.router.navigateByUrl('studentOnlineQuiz'); 
-     this.router.navigateByUrl('teacherHome'); 
-    // this.router.navigateByUrl('teacherConductTest'); 
-    // this.router.navigateByUrl('teacherMyClassRoom');
+    if (loginUserName.toUpperCase() == 'STUDENT') {
+      this.router.navigateByUrl('studentHome');
+    }
+
+    if (loginUserName.toUpperCase() == 'TEACHER') {
+      this.router.navigateByUrl('teacherHome');
+    }
+
 
   }
 
