@@ -1,1 +1,1 @@
-# Zeali-VirtualSchool
+# VirtualSchool
